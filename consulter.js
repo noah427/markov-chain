@@ -2,9 +2,14 @@ const fs = require("fs");
 
 module.exports = class Consultor {
   constructor(input) {
+    this.inputFile = input;
     try {
       this.input = JSON.parse(fs.readFileSync(input).toString());
     } catch {}
+  }
+
+  loadFromFile() {
+    this.input = JSON.parse(fs.readFileSync(this.inputFile).toString());
   }
 
   anyWord() {

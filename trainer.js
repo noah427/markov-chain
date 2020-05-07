@@ -13,7 +13,6 @@ module.exports = class Trainer {
   trainText(text = "") {
     // add states to the statesManager from a string
 
-    text = text.replace(/[^A-Za-z0-9'’]/g, " ");
 
     const words = text
       .split(" ")
