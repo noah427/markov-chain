@@ -12,8 +12,7 @@ module.exports = class Trainer {
 
   trainText(text = "") {
     // add states to the statesManager from a string
-
-
+    text = text.replace(/\\n/g, " ");
     const words = text
       .split(" ")
       .filter((v) => v != "")

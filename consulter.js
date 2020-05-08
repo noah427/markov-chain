@@ -35,10 +35,10 @@ module.exports = class Consultor {
     return highest.word;
   }
 
-  generateText(len) {
+  generateText(len, startWord = null) {
     let output = "";
     let lastWord = "";
-    let seedWord = this.anyWord();
+    let seedWord = startWord ? startWord : this.anyWord();
 
     lastWord = seedWord;
 
